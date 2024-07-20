@@ -1,0 +1,99 @@
+POST http://localhost:1234/signup
+Content-Type: application/json
+
+{
+    "Username":"likkash22",
+    "Password":"222",
+    "FullName":"Likkash77",
+    "Contact":37373737
+}
+
+###
+
+POST http://localhost:1234/login
+Content-Type: application/json
+
+{
+    "Username":"likkash",
+    "Password":"1234"
+}
+
+###
+
+POST http://localhost:1234/exp/new
+Content-Type: application/json
+
+{
+    "ExpenseId":5,
+    "ExpenseDate":"5.7.2024",
+    "ExpenseByUserName":"likkash",
+    "ExpenseFor":"snacks",
+    "ExpenseAmount":200
+}
+
+###
+
+
+PUT http://localhost:1234/exp/update/669b3c5842e593482cb49989
+Content-Type: application/json
+
+{
+      "ExpenseId": 30,
+      "ExpenseDate": "5.7.2024",
+      "ExpenseByUserName": "likkash",
+      "ExpenseFor": "snacks",
+      "ExpenseAmount": 200
+}
+
+
+###
+
+DELETE http://localhost:1234/exp/delete/669b3c5842e593482cb49989/likkash
+
+
+###
+
+GET http://localhost:1234/date/19.7.2024
+
+###
+
+
+GET http://localhost:1234/exp/user/Razzak Sir
+
+###
+
+
+GET http://localhost:1234/
+
+###
+
+PUT http://localhost:1234/upd
+Content-Type: application/json
+
+{
+    "_id": "669b2e4a4ee9cf107c1951a5",
+    "ExpenseId": 22,
+    "ExpenseDate": "1.7.2024",
+    "ExpenseByUserName": "likkash",
+    "ExpenseFor": "dress",
+    "ExpenseAmount": 1000
+}
+
+
+
+###
+
+
+GET http://localhost:1234/669934062f62abec3df100b4
+
+
+###
+
+GET http://localhost:1234/exp/user/669b2dc24ee9cf107c19519f
+
+###
+
+
+DELETE http://localhost:1234/erase/669b3bcb42e593482cb4997f
+
+###
