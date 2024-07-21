@@ -7,7 +7,7 @@ import Login from './login';
 import NavBar from './navbar';
 import AddExpense from './AddExpense';
 import Update from './update';
-// import ExpenseTable from './ExpenseTable'; 
+import './back.css'; // Import your CSS file
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,13 +15,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/navbar" element={<NavBar />} />
-        <Route path="/signupform" element={<SignUp />} />
-        <Route path="/expenseadd" element={<AddExpense />} />
-        <Route path="/View" element={<Views />} />
-        <Route path="/update/:id" element={<Update />} />
-        {/* <Route path="/expensetable" element={<ExpenseTable />} />  */}
+        <Route path="/" element={<div className="main-container"><Login /></div>} />
+        <Route path="/navbar" element={<div className="navbar-background"><NavBar /></div>} />
+        <Route path="/signupform" element={<div className="main-container"><SignUp /></div>} />
+        <Route path="/expenseadd" element={<div className="addupdate"><AddExpense /></div>} />
+        <Route path="/view" element={<div className="viewpage"><Views /></div>} />
+        <Route path="/update/:id" element={<div className="addupdate"><Update /></div>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

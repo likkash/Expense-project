@@ -26,6 +26,25 @@ body, html {
     height: 100vh;
 }
 
+.viewpage {
+    background-image: url('./newimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.addupdate {
+    background-image: url('./add&updateimg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 .table-container {
     background-color: rgba(255, 255, 255, 0.8); /* Light whitish background */
     padding: 20px;

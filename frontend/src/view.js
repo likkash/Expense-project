@@ -54,15 +54,14 @@ export const Views = () => {
   ];
 
   return (
-    <div className='container login-signup-background '>
+    <div className='container viewpage' style={{ height: '100vh', overflow: 'hidden' }}>
       <Box
         display="flex"
         flexDirection="column"
         alignItems="center"
-        mt={6}
-        style={{ minHeight: '100vh' }}
+        style={{ height: '100vh', overflowY: 'auto' }}
       >
-        <div className='shadow-lg p-4 bg-white table ' style={{ maxWidth: '1000px', width: '100%' }}>
+        <div className='shadow-lg p-4 bg-white table' style={{ maxWidth: '1000px', width: '100%', marginTop: '20px' }}>
           <Box
             display="flex"
             alignItems="center"
@@ -89,12 +88,11 @@ export const Views = () => {
               onClick={handleClear}
               variant="contained"
               color="warning"
-              
             >
               <CancelIcon />
             </Button>
           </Box>
-          <div className='table-container'style={{ height: 400 }}>
+          <div className='table-container' style={{ height: 400 }}>
             <DataGrid
               onRowSelectionModelChange={(ids) => {
                 const id = ids[0];
@@ -134,7 +132,7 @@ export const Views = () => {
               </Box>
             </Box>
           )}
-          <Box display="flex" justifyContent="center" mt={3}>
+          <Box display="flex" justifyContent="center" mt={3} mb={3}>
             <Button onClick={() => nav('/navbar')} variant="contained" color="secondary">
               Back
             </Button>

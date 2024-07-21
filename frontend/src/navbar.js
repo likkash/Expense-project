@@ -14,7 +14,6 @@ import AddIcon from '@mui/icons-material/Add';
 import ViewCompactIcon from '@mui/icons-material/ViewCompact';
 import { DataGrid } from '@mui/x-data-grid';
 import { callGet } from './service';
-import './back.css'; // Import the CSS file
 
 export const NavBar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -63,8 +62,19 @@ export const NavBar = () => {
     ];
 
     return (
-        <Box className="navbar-background">
-            <AppBar position="static" sx={{ backgroundColor: '#2C3E50', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+        <Box
+            className="navbar-background"
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100vh',
+                overflow: 'hidden',
+            }}
+        >
+            <AppBar
+                position="sticky"
+                sx={{ backgroundColor: '#2C3E50', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
+            >
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -117,16 +127,22 @@ export const NavBar = () => {
                 </Toolbar>
             </AppBar>
 
-            {/* Expense Table */}
             <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                mt={6}
-                style={{ minHeight: '100vh' }}
+                sx={{
+                    flex: 1,
+                    overflowY: 'auto',
+                    padding: 2,
+                }}
             >
-                <div className="table-container">
-                    <div style={{ height: 400 }}>
+                <Box
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    mt={6}
+                >
+                        <div className="table-container">
+
+                    <div style={{ height: 400, width: '100%' }}>
                         <DataGrid
                             initialState={{
                                 pagination: {
@@ -140,7 +156,8 @@ export const NavBar = () => {
                             style={{ minHeight: 400 }}
                         />
                     </div>
-                </div>
+                    </div>
+                </Box>
             </Box>
         </Box>
     );

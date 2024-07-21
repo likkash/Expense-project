@@ -49,7 +49,7 @@ export default function SignUp() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginTop: 8,
+            marginTop: 6,
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>

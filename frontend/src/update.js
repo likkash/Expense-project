@@ -53,13 +53,13 @@ const Update = () => {
   };
 
   return (
-    <Container>
-      <div className="container">
+    <Container className="addupdate" style={{ height: '100vh', overflow: 'auto' }}>
+      <div className="container ">
         <div className="row justify-content-center">
-          <Typography variant="h4" color="primary" align="center">
+          <Typography variant="h4" color="darkblue" align="center">
             Expense Edit Form
           </Typography>
-          <div className="col-md-8 col-12">
+          <div className="col-md-8 col-12 table-container">
             <div className="card p-5 shadow-lg">
               <div className="row justify-content-between">
                 <div className="col-md-6 mt-md-0 mt-2 col-sm-12 col-12">
@@ -119,7 +119,7 @@ const Update = () => {
               </Box>
               <Box display="flex" justifyContent="center" mt={3}>
                 <Button onClick={() => nav('/view')} variant="contained" color="secondary">
-                  Back to View
+                  Back 
                 </Button>
               </Box>
             </div>

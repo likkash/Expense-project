@@ -49,10 +49,10 @@ const AddExpense = () => {
   };
 
   return (
-    <Container >
+    <Container style={{ height: '100vh', overflow: 'auto' }}>
       <div className="container">
         <div className="row justify-content-center">
-          <Typography variant="h4" color="darkblue" align="center" >
+          <Typography variant="h4" color="darkblue" align="center">
             Expense Add Form
           </Typography>
           <div className="col-md-8 col-12 table-container">
@@ -89,7 +89,6 @@ const AddExpense = () => {
                     label="Expense For"
                     value={datatype.ExpenseFor}
                     variant="outlined"
-                    
                     fullWidth
                     sx={{ padding: '8px' }}  // Added padding
                   />
@@ -129,14 +128,18 @@ const AddExpense = () => {
                   onClick={clearFields}
                   variant="contained"
                   color="error"
-                  size="large" // Increased size
+                  size="medium"
                 >
                   <BackspaceIcon />
-                  <span style={{ marginLeft: '8px' }}>Clear</span> {/* Added text for clarity */}
                 </Button>
               </Box>
               <Box display="flex" justifyContent="center" mt={3}>
-                <Button onClick={() => nav('/navbar')} variant="contained" color="secondary">
+                <Button
+                  onClick={() => nav('/navbar')}
+                  variant="contained"
+                  color="secondary"
+                  size="medium"
+                >
                   Back 
                 </Button>
               </Box>

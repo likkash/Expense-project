@@ -97,10 +97,6 @@ export const Login = () => {
                 {error}
               </Typography>
             )}
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
             <Button
               type="submit"
               fullWidth
