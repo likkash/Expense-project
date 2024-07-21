@@ -72,6 +72,7 @@ export const Views = () => {
               label="Search by Expense Date"
               className='table-container'
               variant="outlined"
+              color="warning"
               value={searchDate}
               onChange={(e) => setSearchDate(e.target.value)}
               style={{ marginRight: '10px', width: '300px' }} // Adjust width as needed

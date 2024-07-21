@@ -17,6 +17,16 @@ const AddExpense = () => {
     ExpenseAmount: ""
   });
 
+  const clearFields = () => {
+    setDatatype({
+      ExpenseId: "",
+      ExpenseDate: "",
+      ExpenseByUserName: "",
+      ExpenseFor: "",
+      ExpenseAmount: ""
+    });
+  };
+
   const collecting = (eve) => {
     const { name, value } = eve.target;
     setDatatype((old) => ({
@@ -31,22 +41,14 @@ const AddExpense = () => {
     try {
       const response = await callPost('http://localhost:1234/exp/new', datatype);
       alert(JSON.stringify(response.data));
-      nav('/navbar'); // Navigate to the desired page after publishing
+      clearFields(); // Clear the text fields after the alert
     } catch (error) {
       console.error("Error publishing data:", error);
       alert("There was an error submitting your data. Please try again.");
     }
   };
 
-  const clearFields = () => {
-    setDatatype({
-      ExpenseId: "",
-      ExpenseDate: "",
-      ExpenseByUserName: "",
-      ExpenseFor: "",
-      ExpenseAmount: ""
-    });
-  };
+
 
   return (
     <Container style={{ height: '100vh', overflow: 'auto' }}>
